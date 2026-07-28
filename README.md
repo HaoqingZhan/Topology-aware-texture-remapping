@@ -1,20 +1,24 @@
 # Topology-aware texture remapping
 TPPack is a new framework for texture remapping of Photogrammetric 3D Building Models. It can be used to solve the problems of severe structural fragmentation, poor topological continuity and low space utilization of the input model texture. 
+#### Fig. 1 Problem description.
 <img width="5294" height="2027" alt="image" src="https://github.com/HaoqingZhan/Topology-aware-texture-remapping/blob/main/docs/images/1.jpg" />
 
 
 ## 1 Core Features
 ### 1.1 Structure-preserving adaptive parameterization
 - For the input mesh, the method first performs a parameterization-oriented surface structural segmentation and conducts an initial parameterization on the resulting charts. The charts are then adaptively re-segmented based on locations where the parameterization fails, and each resulting sub-chart is reparameterized individually. Finally, the sub-charts are merged back into the original charts to complete the structure-preserving chart parameterization.
+#### Fig. 2 Structure-preserving adaptive parameterization.
 <img width="7325" height="1839" alt="image" src="https://github.com/HaoqingZhan/Topology-aware-texture-remapping/blob/main/docs/images/2.jpg" />
 
 ### 1.2 Chart alignment and combination
 - After obtaining structure-preserving parameterizations, the alignment between atlas is carried out to maintain the continuity of texture space and improve the utilization of atlas. This process makes full use of the three-dimensional topological adjacency between charts, and realizes the close alignment between chart boundaries through accurate parameter domain transformation in the unified reference system.
+#### Fig. 3 Chart alignment and combination.
 <img width="5180" height="2095" alt="image" src="https://github.com/HaoqingZhan/Topology-aware-texture-remapping/blob/main/docs/images/3.jpg" />
 
 
 ## 2 Usage
 ### 2.1 Parameter Description
+#### Fig. 4 TPPack_Tool interface.
 <img src="https://github.com/HaoqingZhan/Topology-aware-texture-remapping/blob/main/docs/images/4.png" width="600" />
 
 | Parameter | Description |
@@ -27,18 +31,23 @@ TPPack is a new framework for texture remapping of Photogrammetric 3D Building M
 
 ### 2.2 Example
 - Process the model in default.
+#### Fig. 5 Example of interface input.
 <img src="https://github.com/HaoqingZhan/Topology-aware-texture-remapping/blob/main/docs/images/5.png" width="600" />
+#### Fig. 6 Result of example.
 <img width="2705" height="1568" alt="image" src="https://github.com/HaoqingZhan/Topology-aware-texture-remapping/blob/main/docs/images/6.jpg" />
 
 
 ## 3 Some results
 ### 3.1 Structure-preserving adaptive parameterization
+#### Fig. 7 Comparison of parameterization results.
 <img width="9229" height="9714" alt="image" src="https://github.com/HaoqingZhan/Topology-aware-texture-remapping/blob/main/docs/images/7.jpg" />
 
 ### 3.2 Chart alignment and combination
+#### Fig. 8 Chart alignment and combination results.
 <img width="5192" height="9108" alt="image" src="https://github.com/HaoqingZhan/Topology-aware-texture-remapping/blob/main/docs/images/8.jpg" />
 
 ### 3.3 Two-step comparison
+#### Fig. 9 Comparison of Two-step results.
 <img width="8005" height="13833" alt="image" src="https://github.com/HaoqingZhan/Topology-aware-texture-remapping/blob/main/docs/images/9.jpg" />
 
 
@@ -52,7 +61,8 @@ TPPack is a new framework for texture remapping of Photogrammetric 3D Building M
 ## 5 Notes
 1. Only .obj format 3D models are supported currently;
 2. If the resolution or the Texels-per-unit (TPU) is set too large, it will take longer to run;
-3. The topological characteristics of different models are different. Choosing an appropriate value of n can get better results, and if n is unreasonable, it will lead to wrong results;
+3. The topological characteristics of different models are different. Choosing an appropriate value of n can get better results, and if n is unreasonable, it will lead to wrong results (In Fig. 10, PE is utilization and TP is topological continuity);
+#### Fig. 10 Parameter influence.
 <img width="5481" height="3018" alt="image" src="https://github.com/HaoqingZhan/Topology-aware-texture-remapping/blob/main/docs/images/10.jpg" />
 4. At present, the framework uses the modified MaxRects-BL algorithm to pack charts and chart combinations. We will introduce more advanced packing algorithms in the future.
 
