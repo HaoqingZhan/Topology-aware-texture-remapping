@@ -21,25 +21,35 @@ TPPack is a new framework for texture remapping of Photogrammetric 3D Building M
 | `Value` | If the precision is set by res or tpu, fill in the target resolution or Texels-per-unit value (fill in int for res or float for tpu) |
 
 ### 2.2 Example
+- Process the model in default.
 
 
-## 3 Application Scenarios
+## 3 Some results
+### 3.1 Structure-preserving adaptive parameterization
+
+### 3.2 Chart alignment and combination
+
+### 3.3 Two-step comparison
+
+
+
+## 4 Application Scenarios
 - It is mainly used for 3D models with obvious topological characteristics of buildings and other structures;
 - Digital Twin/Smart City: Reduce resource usage of models in large-scale scenes and optimize rendering efficiency;
 - 3D Visualization Toolchain: Integrate into automated pipelines to batch process model optimization.
 - The application of topological continuity of texture atlas is still to be developed.
 
 
-## 6 Notes
+## 5 Notes
 1. Only .obj format 3D models are supported currently;
 2. If the resolution or the Texels-per-unit (TPU) is set too large, it will take longer to run.
 3. The topological characteristics of different models are different. Choosing an appropriate value of n can get better results, and if n is unreasonable, it will lead to wrong results.
 
 
-## 7 Contribution
+## 6 Contribution
 Welcome to submit Issues to report problems, propose feature suggestions, or participate in code optimization via Pull Requests.
 
 
-## 8 License
+## 7 License
 This project is open source under the [MIT License](LICENSE), free to use, modify and distribute.
 
