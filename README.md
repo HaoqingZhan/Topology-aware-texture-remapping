@@ -16,6 +16,7 @@ TPPack is a new framework for texture remapping of Photogrammetric 3D Building M
 ## 2 Usage
 ### 2.1 Parameter Description
 <img width="874" height="528" alt="image" src="https://github.com/HaoqingZhan/Topology-aware-texture-remapping/blob/main/docs/images/4.png" />
+
 | Parameter | Description |
 |-----------|-------------|
 | `Input OBJ` | Input 3D model path (.obj format) |
