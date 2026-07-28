@@ -15,6 +15,7 @@ TPPack is a new framework for texture remapping of Photogrammetric 3D Building M
 
 ## 2 Usage
 ### 2.1 Parameter Description
+<img width="874" height="528" alt="image" src="https://github.com/HaoqingZhan/Topology-aware-texture-remapping/blob/main/docs/images/4.png" />
 | Parameter | Description |
 |-----------|-------------|
 | `Input OBJ` | Input 3D model path (.obj format) |
@@ -25,15 +26,19 @@ TPPack is a new framework for texture remapping of Photogrammetric 3D Building M
 
 ### 2.2 Example
 - Process the model in default.
+<img width="877" height="528" alt="image" src="https://github.com/HaoqingZhan/Topology-aware-texture-remapping/blob/main/docs/images/5.png" />
+<img width="2705" height="1568" alt="image" src="https://github.com/HaoqingZhan/Topology-aware-texture-remapping/blob/main/docs/images/6.jpg" />
 
 
 ## 3 Some results
 ### 3.1 Structure-preserving adaptive parameterization
+<img width="9229" height="9714" alt="image" src="https://github.com/HaoqingZhan/Topology-aware-texture-remapping/blob/main/docs/images/7.jpg" />
 
 ### 3.2 Chart alignment and combination
+<img width="5192" height="9108" alt="image" src="https://github.com/HaoqingZhan/Topology-aware-texture-remapping/blob/main/docs/images/8.jpg" />
 
 ### 3.3 Two-step comparison
-
+<img width="8005" height="13833" alt="image" src="https://github.com/HaoqingZhan/Topology-aware-texture-remapping/blob/main/docs/images/9.jpg" />
 
 
 ## 4 Application Scenarios
@@ -47,6 +52,7 @@ TPPack is a new framework for texture remapping of Photogrammetric 3D Building M
 1. Only .obj format 3D models are supported currently;
 2. If the resolution or the Texels-per-unit (TPU) is set too large, it will take longer to run;
 3. The topological characteristics of different models are different. Choosing an appropriate value of n can get better results, and if n is unreasonable, it will lead to wrong results;
+<img width="5481" height="3018" alt="image" src="https://github.com/HaoqingZhan/Topology-aware-texture-remapping/blob/main/docs/images/10.jpg" />
 4. At present, the framework uses the modified MaxRects-BL algorithm to pack charts and chart combinations. We will introduce more advanced packing algorithms in the future.
 
 
