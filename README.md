@@ -1,14 +1,16 @@
 # Topology-aware texture remapping
 TPPack is a new framework for texture remapping of Photogrammetric 3D Building Models. It can be used to solve the problems of severe structural fragmentation, poor topological continuity and low space utilization of the input model texture. 
-<img width="5294" height="2027" alt="image" src="https://github.com/user-attachments/assets/3d8d6dd2-de71-42f2-9014-b0e9aebf7792" />
+<img width="5294" height="2027" alt="image" src="https://github.com/HaoqingZhan/Topology-aware-texture-remapping/blob/main/docs/images/1.jpg" />
 
 
 ## 1 Core Features
 ### 1.1 Structure-preserving adaptive parameterization
 - For the input mesh, the method first performs a parameterization-oriented surface structural segmentation and conducts an initial parameterization on the resulting charts. The charts are then adaptively re-segmented based on locations where the parameterization fails, and each resulting sub-chart is reparameterized individually. Finally, the sub-charts are merged back into the original charts to complete the structure-preserving chart parameterization.
+<img width="7325" height="1839" alt="image" src="https://github.com/HaoqingZhan/Topology-aware-texture-remapping/blob/main/docs/images/2.jpg" />
 
 ### 1.2 Chart alignment and combination
 - After obtaining structure-preserving parameterizations, the alignment between atlas is carried out to maintain the continuity of texture space and improve the utilization of atlas. This process makes full use of the three-dimensional topological adjacency between charts, and realizes the close alignment between chart boundaries through accurate parameter domain transformation in the unified reference system.
+<img width="5180" height="2095" alt="image" src="https://github.com/HaoqingZhan/Topology-aware-texture-remapping/blob/main/docs/images/3.jpg" />
 
 
 ## 2 Usage
