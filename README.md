@@ -51,6 +51,10 @@ TPPack is a new framework for texture remapping of Photogrammetric 3D Building M
 #### Fig. 9 Comparison of Two-step results.
 <img width="8005" height="13833" alt="image" src="https://github.com/HaoqingZhan/Topology-aware-texture-remapping/blob/main/docs/images/9.jpg" />
 
+### 3.4 Topological continuity
+#### Fig. 10 Some results of topological continuity.
+<img width="4784" height="7508" alt="image" src="https://github.com/HaoqingZhan/Topology-aware-texture-remapping/blob/main/docs/images/11.jpg" />
+
 
 ## 4 Application Scenarios
 - It is mainly used for 3D models with obvious topological characteristics of buildings and other structures;
@@ -63,7 +67,7 @@ TPPack is a new framework for texture remapping of Photogrammetric 3D Building M
 1. Only .obj format 3D models are supported currently;
 2. If the resolution or the Texels-per-unit (TPU) is set too large, it will take longer to run;
 3. The topological characteristics of different models are different. Choosing an appropriate value of n can get better results, and if n is unreasonable, it will lead to wrong results (In Fig. 10, PE is utilization and TP is topological continuity);
-#### Fig. 10 Parameter influence.
+#### Fig. 11 Parameter influence.
 <img width="5481" height="3018" alt="image" src="https://github.com/HaoqingZhan/Topology-aware-texture-remapping/blob/main/docs/images/10.jpg" />
 4. At present, the framework uses the modified MaxRects-BL algorithm to pack charts and chart combinations. We will introduce more advanced packing algorithms in the future.
 
